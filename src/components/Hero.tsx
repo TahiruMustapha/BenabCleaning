@@ -8,6 +8,7 @@ import GetStarted from "./GetStarted";
 import Service from "./Service";
 import About from "./About";
 import Gallery from "./Gallery";
+import Team from "./Team";
 
 const Hero = () => {
   const settings = {
@@ -113,6 +114,9 @@ const Hero = () => {
       </section>
       <section id="gallery">
         <Gallery/>
+      </section>
+      <section id="team">
+        <Team/>
       </section>
     </main>
   );
