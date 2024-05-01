@@ -5,10 +5,10 @@ import AboutInfo from "./AboutInfo";
 const About = () => {
   return (
     <div id="about"> 
-    <div className="  h-full py-40 mt-36 w-full bg-gray-100">
-      <div className=" w-[80%] flex gap-32   mx-auto ">
-        <div>
-          <img src="/about1.jpg" alt="image" />
+    <div className="  h-full py-16 md:py-40 mt-20 md:mt-36 w-full bg-gray-100">
+      <div className=" w-full p-3 md:w-[80%] md:flex gap-32   mx-auto ">
+        <div className=" mb-10 md:mb-0 ">
+          <img src="/about1.jpg" alt="image" className="shadow-md" />
         </div>
         <div className=" max-w-[560px] px-3 ">
           <h1 className=" uppercase text-blue-800 tracking-wide font-light">
@@ -22,14 +22,14 @@ const About = () => {
             tempore, cum soluta nobis est eligendi optio cumque nihil impedit
             quo minus id quod maxime placeat facere possimus.
           </p>
-          <div className=" w-full mt-8 flex justify-start gap-32">
+          <div className=" w-full mt-8 flex justify-start gap-8 md:gap-32">
             <div className=" flex  justify-start flex-col">
               <img
                 src="/about2.jpg"
                 alt="img"
                 className=" w-20 h-20 rounded-full"
               />
-              <p className=" text-gray-400 tracking-wider text-6xl font-medium mt-16">
+              <p className=" text-gray-400 tracking-wider text-xl md:text-6xl font-medium mt-16">
                 2080 +
               </p>
               <p className=" text-gray-400 uppercase text-lg tracking-wider font-normal mt-6 ">
@@ -42,7 +42,7 @@ const About = () => {
                 alt="img"
                 className=" w-20 h-20 rounded-full"
               />
-              <p className=" text-gray-400 tracking-wider text-6xl font-medium mt-16">
+              <p className=" text-gray-400 tracking-wider text-xl md:text-6xl font-medium mt-16">
                 4500 +
               </p>
               <p className=" text-gray-400 uppercase text-lg tracking-wider font-normal mt-6 ">

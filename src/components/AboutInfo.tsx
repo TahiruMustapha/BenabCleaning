@@ -34,7 +34,7 @@ const aboutInfoData = [
 ];
 const AboutInfo = () => {
   return (
-    <div id={"/service"} className=" w-full mt-20 ">
+    <div id={"/about"} className=" w-full mt-20 ">
       <div className=" flex flex-col  max-w-[480px] mx-auto  mt-5 items-center justify-between">
         <img src="/service.png" alt="img" className=" mt-10 mb-10" />
         <h3 className=" text-blue-600 font-light tracking-wider">WHAT WE DO</h3>
@@ -44,7 +44,7 @@ const AboutInfo = () => {
           </h4>
         </div>
       </div>
-      <div className=" w-[80%] mx-auto mt-32  flex items-center gap-6  ">
+      <div className=" w-full p-3 md:w-[80%] mx-auto mt-10 md:mt-32 md:flex items-center gap-6  ">
         {aboutInfoData.map((servBox) => (
           <div
             key={servBox.title}
