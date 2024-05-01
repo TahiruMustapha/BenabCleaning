@@ -40,7 +40,7 @@ const Team = () => {
       <div className=" w-full  md:w-[80%] mx-auto md:mt-20 mt-10 gap-6 h-full md:h-[70vh] flex justify-center flex-col md:flex-row  items-center">
         {teamData.map((team) => (
           <div className=" relative group w-full h-full p-2 md:p-0">
-            <div className="">
+            <div key={team.name} className="">
               <img
                 src={team.img}
                 alt="img"
