@@ -21,7 +21,6 @@ const Hero = () => {
         <Header />
       </div>
       
-      
       <section>
         <Home/>
       </section>
