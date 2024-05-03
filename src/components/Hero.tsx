@@ -10,39 +10,39 @@ import Team from "./Team";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Home from "./Home";
+import Pricing from "./Pricing";
 
 const Hero = () => {
- 
- 
- 
   return (
     <main id="/" className="relative w-full h-screen">
-      <div  className= { ` fixed text-white top-0 z-50 w-full`}>
+      <div className={` fixed text-white top-0 z-50 w-full`}>
         <Header />
       </div>
-      
+
       <section>
-        <Home/>
+        <Home />
       </section>
-      
+
       <section id="service">
-        <Service/>
+        <Service />
       </section>
       <section id="about">
-        <About/>
-
+        <About />
       </section>
       <section id="gallery">
-        <Gallery/>
+        <Gallery />
       </section>
       <section id="team">
-        <Team/>
+        <Team />
       </section>
-     <section id="contact">
-      <Contact/>
-     </section>
+      <section id="contact">
+        <Contact />
+      </section>
+      <section id="pricing">
+        <Pricing/>
+      </section>
 
-     <Footer/>
+      <Footer />
     </main>
   );
 };
