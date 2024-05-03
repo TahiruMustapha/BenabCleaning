@@ -11,7 +11,7 @@ const Pricing = () => {
           </h4> 
         
         </div>
-        <div className=' flex items-center  border-gray-200 border-[0.4px] px-3 py-1 rounded-md'>
+        <div className=' flex items-center mt-16  border-gray-200 border-[0.4px] px-3 py-1 rounded-md'>
             <button className=' bg-red-700 rounded-md px-6 py-3 text-white'>Monthly</button>
             <button className=' text-blue-800 ml-4'>Yearly</button>
             <button className=' bg-blue-900 ml-1 text-white px-2 mr-5 text-sm rounded-md py-[0.10rem]'>20% Off</button>
