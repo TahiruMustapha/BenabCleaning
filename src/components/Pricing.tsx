@@ -40,7 +40,7 @@ const priceData = [
 
 const Pricing = () => {
   return (
-    <div id="pricing" className=" w-[80%] mx-auto">
+    <div id="pricing" className=" w-full  md:w-[80%] mx-auto">
       <div className=" w-full   mx-auto flex flex-col items-center justify-center       ">
         <h3 className=" text-blue-600 font-light mt-28 inline-block  tracking-wider">
           PRICING
@@ -60,13 +60,13 @@ const Pricing = () => {
           </button>
         </div>
       </div>
-      <div className=" w-full  flex flex-col md:flex-row items-center gap-7 mt-16">
+      <div className=" w-full md:px-0  md:w-full   flex flex-col md:flex-row items-center gap-7 mt-16">
         {priceData.map((priceInfo) => (
           <div
             className={`${
               priceInfo.featured
-                ? `rounded-md relative overflow-hidden   shadow-xl duration-200  w-[800px] py-12 border-gray-100 border-[1px] flex flex-col gap-7  items-center  `
-                : `rounded-md  hover:shadow-xl  duration-200 hover:border-none  w-[800px] py-12 border-gray-100 border-[1px] flex flex-col gap-7  items-center  `
+                ? `rounded-md relative overflow-hidden   shadow-xl duration-200 w-full  md:w-[800px] py-12 border-gray-100 border-[1px] flex flex-col gap-7  items-center  `
+                : `rounded-md  hover:shadow-xl  duration-200 hover:border-none w-full  md:w-[800px] py-12 border-gray-100 border-[1px] flex flex-col gap-7  items-center  `
             }   `}
           >
             <Image src={priceInfo.img} alt="img" width={50} height={50} />
