@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Call from "./Call";
 
 const priceData = [
   {
@@ -40,7 +41,7 @@ const priceData = [
 
 const Pricing = () => {
   return (
-    <div id="pricing" className=" w-full  md:w-[80%] mx-auto">
+    <div id="pricing" className=" w-full pl-2 md:px-0  md:w-[80%] mx-auto">
       <div className=" w-full   mx-auto flex flex-col items-center justify-center       ">
         <h3 className=" text-blue-600 font-light mt-28 inline-block  tracking-wider">
           PRICING
@@ -94,6 +95,7 @@ const Pricing = () => {
           </div>
         ))}
       </div>
+    
     </div>
   );
 };
