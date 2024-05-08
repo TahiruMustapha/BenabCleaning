@@ -13,6 +13,8 @@ import Home from "./Home";
 import Pricing from "./Pricing";
 import Call from "./Call";
 import Client from "./Client";
+import NewsLetter from "./NewsLetter";
+import Blog from "./Blog";
 
 const Hero = () => {
   return (
@@ -48,6 +50,12 @@ const Hero = () => {
       </section>
       <section id="client">
         <Client/>
+      </section>
+      <section>
+        <NewsLetter/>
+      </section>
+      <section id="blog">
+        <Blog/>
       </section>
 
       <Footer />

@@ -12,6 +12,32 @@ const Gallery = () => {
     dots:true,
     arrows: false,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
   };
 
   return (
@@ -26,10 +52,10 @@ const Gallery = () => {
         </div>
       </div>
       <div className="  mt-24 max-w-[78%]  pb-10   mx-auto  ">
-        <Slider {...settings} className="">
-            <div className={ `relative   group`}>
+        <Slider {...settings}>
+            <div className={ `relative overflow-x-hidden mx-1 max-w-[510px]   group`}>
                 <img src="/gallery1.jpg" alt="image" className="max-w-[562px]  object-cover" />
-               <div className=" w-[96%]  absolute top-0 hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  h-full   ">
+               <div className=" w-[100%]  absolute top-0 hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  h-full   ">
                 <div className="w-full h-full hidden group-hover:inline-flex    gap-5 flex-col items-center justify-center       ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center  bg-yellow-400 shadow-md"><FaSearch/> </p> 
                 <h3 className=" text-white  text-lg font-semibold">Monthly Cleaning Service</h3>
@@ -38,9 +64,9 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative  group overflow-x-hidden ">
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group ">
             <img src="/gallery2.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
-            <div className=" w-[96%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
+            <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 
                 <h3 className=" text-white text-lg font-semibold">Monthly Cleaning Service</h3>
@@ -49,9 +75,9 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative  group overflow-x-hidden ">
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group  ">
             <img src="/gallery3.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
-            <div className=" w-[96%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
+            <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 
                 <h3 className=" text-white text-lg font-semibold">Monthly Cleaning Service</h3>
@@ -60,9 +86,9 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative  group overflow-x-hidden ">
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group  ">
             <img src="/about33.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
-            <div className=" w-[96%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
+            <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 
                 <h3 className=" text-white text-lg font-semibold">Monthly Cleaning Service</h3>

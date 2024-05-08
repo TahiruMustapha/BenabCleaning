@@ -65,7 +65,10 @@ const Header = () => {
       setScrollColor(false);
     }
   };
-  window.addEventListener("scroll", scrolly);
+ 
+    window.addEventListener("scroll", scrolly);
+
+ 
   return (
     <header
       className={
