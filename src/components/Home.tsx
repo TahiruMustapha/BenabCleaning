@@ -15,9 +15,9 @@ const Home = () => {
         autoplaySpeed: 2000,
       };
   return (
-    <div className='  h-[100vh]'>
+    <div className='h-[100vh]'>
        <Slider {...settings} className=" ">
-        <div className=" relative">
+        <div className="relative">
           <img
             src={"/cln1.jpg"}
             alt="image"

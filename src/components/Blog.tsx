@@ -42,7 +42,7 @@ const blogData = [
 ];
 const Blog = () => {
   return (
-    <div id="blog" className="  mt-20 h-[100vh]">
+    <div id="blog" className="  mt-20 mb-20 h-full">
       <div className=" flex flex-col  max-w-[480px] mx-auto  mt-5 items-center justify-between">
         <h3 className=" text-blue-600 font-light tracking-wider">BLOG</h3>
         <div>
@@ -53,7 +53,7 @@ const Blog = () => {
       </div>
       <div className=" h-full  flex  px-2 py-2 flex-col md:flex-row gap-6  mt-20 w-full md:w-[85%] mx-auto ">
         {blogData.map((blogItem) => (
-          <div className=" w-full md:w-[600px]  bg-blue-50 ">
+          <div className=" w-full md:w-[600px]  bg-blue-50 pb-6 ">
             <img src={blogItem.img} alt="img"   className=" w-full object-cover" />
           <div className=" mt-6 px-6">
               <div className=" flex items-center gap-4">
