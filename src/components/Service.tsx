@@ -34,7 +34,7 @@ const serviceData = [
 ];
 const Service = () => {
   return (
-    <div  id="service" className=" w-full mt-10  md:mt-20 ">
+    <div  id="service" className=" w-full mt-10  md:mt-80 ">
       <div className=" flex flex-col  max-w-[450px] mx-auto  mt-5 items-center justify-between">
         <img src="/service.png" alt="img" className=" mt-10 mb-10" />
         <h3 className=" text-blue-600 font-light tracking-wider">

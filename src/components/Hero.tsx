@@ -27,7 +27,7 @@ const Hero = () => {
         <Home />
       </section>
 
-      <section id="service">
+      <section id="service" >
         <Service />
       </section>
       <section id="about">

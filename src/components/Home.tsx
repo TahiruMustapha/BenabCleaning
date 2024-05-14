@@ -18,12 +18,12 @@ const Home = () => {
   return (
     <div className="h-[100vh]">
       <Slider {...settings} className=" ">
-        <div className="relative">
+        <div className=" h-full relative">
           <img
             src={"/cln1.jpg"}
             alt="image"
             
-            className=" w-full h-[100vh]  object-cover"
+            className=" w-full h-[100vh] md:h-full  object-cover"
           />
           <div className="  max-w-[650px] top-40   left-10  absolute ">
             <h3 className=" text-xl  font-bold text-white">
@@ -43,11 +43,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className=" relative">
+        <div className=" h-full relative">
           <img
             src={"/cln4.jpg"}
             alt="image"
-            className=" w-full h-[100vh]  object-cover"
+            className=" w-full h-[100vh] md:h-full  object-cover"
           />
           <div className="  max-w-[650px] top-40 left-[10%] absolute ">
             <h3 className=" text-xl font-bold text-white">CLEANING SERVICE</h3>
@@ -66,11 +66,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" relative">
+        <div className=" h-full relative">
           <img
             src={"/cln3.jpg"}
             alt="image"
-            className=" w-full h-[100vh] mb-10 object-cover"
+            className=" w-full h-[100vh] md:h-full mb-10 object-cover"
           />
 
           <div className="  max-w-[650px] top-40 right-10 absolute ">
