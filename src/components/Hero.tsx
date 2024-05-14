@@ -15,6 +15,7 @@ import Client from "./Client";
 import NewsLetter from "./NewsLetter";
 import Blog from "./Blog";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const Hero = () => {
   return (
@@ -56,6 +57,9 @@ const Hero = () => {
       </section>
       <section id="blog">
         <Blog />
+      </section>
+      <section>
+        <ScrollToTop/>
       </section>
       <section>
         <Footer />
