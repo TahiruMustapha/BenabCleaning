@@ -16,9 +16,9 @@ const Home = () => {
     autoplaySpeed: 2000,
   };
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh] ">
       <Slider {...settings} className=" ">
-        <div className=" h-full relative">
+        <div className="  relative">
           <img
             src={"/cln1.jpg"}
             alt="image"
@@ -29,7 +29,7 @@ const Home = () => {
             <h3 className=" text-xl  font-bold text-white">
               WE ARE CLEANING EXPERT
             </h3>
-            <h2 className=" mt-8 text-5xl leading-tight text-white capitalize font-bold">
+            <h2 className=" mt-8 text-3xl md:text-5xl leading-tight text-white capitalize font-bold">
               We have the best cleaning services offering in Ghana
             </h2>
             <p className=" mt-8  leading-tight  text-white font-medium text-xl">
@@ -37,13 +37,13 @@ const Home = () => {
               sapiente animi amet veritatis non corrupti itaque molestiae,
               magni, minus, doloribus eius.
             </p>
-            <div className=" mt-8 flex  gap-4 w-ful items-center ">
+            <div className=" mt-8 flex   gap-4 w-ful items-center ">
               <GetStarted />
               <PlayBtn />
             </div>
           </div>
         </div>
-        <div className=" h-full relative">
+        <div className=" relative">
           <img
             src={"/cln4.jpg"}
             alt="image"
@@ -51,7 +51,7 @@ const Home = () => {
           />
           <div className="  max-w-[650px] top-40 left-[10%] absolute ">
             <h3 className=" text-xl font-bold text-white">CLEANING SERVICE</h3>
-            <h2 className=" mt-8 text-5xl leading-tight text-white capitalize font-bold">
+            <h2 className=" mt-8 text-3xl md:text-5xl leading-tight text-white capitalize font-bold">
               We have the best cleaning services offering in Ghana
             </h2>
             <p className=" mt-8 leading-tight text-white font-medium text-xl">
@@ -66,7 +66,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" h-full relative">
+        <div className="relative">
           <img
             src={"/cln3.jpg"}
             alt="image"
@@ -78,7 +78,7 @@ const Home = () => {
               {" "}
               CLEANING SERVICE
             </h3>
-            <h2 className=" mt-8 pl-2 md:pl-0 text-5xl leading-tight text-white capitalize font-bold">
+            <h2 className=" mt-8 pl-2 md:pl-0 text-3xl md:text-5xl leading-tight text-white capitalize font-bold">
               Do you want a personal cleaning service?
             </h2>
             <p className=" mt-8 pl-2 md:pl-0 leading-tight text-white font-medium text-xl">
