@@ -47,7 +47,7 @@ const Team = () => {
                 className=" rounded-md object-cover w-full  "
               />
             </div>
-            <div className=" hidden  group-hover:inline-flex flex-col px-3 py-4 items-center justify-center gap-5 absolute text-white  w-[200px] top-[52%] left-[15%] right-[20%] bg-blue-900 ">
+            <div className=" hidden  group-hover:inline-flex flex-col px-3 py-4 items-center justify-center gap-5 absolute text-white  w-[70%] mx-auto top-[64.5%] z-50 left-[15%] right-[25%] md:top-[52%] md:left-[15%] md:right-[20%] bg-blue-900 ">
               <p className=" text-lg font-semibold">{team.name}</p>
               <p>{team.role}</p>
               <p className=" flex w-full cursor-pointer items-center justify-center gap-2">
