@@ -1,26 +1,28 @@
-import React from 'react'
-import GetStarted from './GetStarted'
-import PlayBtn from './PlayBtn'
+import React from "react";
+import GetStarted from "./GetStarted";
+import PlayBtn from "./PlayBtn";
 import Slider from "react-slick";
+import Image from "next/image";
 
 const Home = () => {
-    const settings = {
-        infinite: true,
-    
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 500,
-        arrows: false,
-        autoplaySpeed: 2000,
-      };
+  const settings = {
+    infinite: true,
+
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
+    arrows: false,
+    autoplaySpeed: 2000,
+  };
   return (
-    <div className='h-[100vh]'>
-       <Slider {...settings} className=" ">
+    <div className="h-[100vh]">
+      <Slider {...settings} className=" ">
         <div className="relative">
           <img
             src={"/cln1.jpg"}
             alt="image"
+            
             className=" w-full h-[100vh]  object-cover"
           />
           <div className="  max-w-[650px] top-40   left-10  absolute ">
@@ -48,9 +50,7 @@ const Home = () => {
             className=" w-full h-[100vh]  object-cover"
           />
           <div className="  max-w-[650px] top-40 left-[10%] absolute ">
-            <h3 className=" text-xl font-bold text-white">
-            CLEANING SERVICE
-            </h3>
+            <h3 className=" text-xl font-bold text-white">CLEANING SERVICE</h3>
             <h2 className=" mt-8 text-5xl leading-tight text-white capitalize font-bold">
               We have the best cleaning services offering in Ghana
             </h2>
@@ -74,7 +74,10 @@ const Home = () => {
           />
 
           <div className="  max-w-[650px] top-40 right-10 absolute ">
-            <h3 className=" text-xl pl-2 md:pl-0 font-bold text-white"> CLEANING SERVICE</h3>
+            <h3 className=" text-xl pl-2 md:pl-0 font-bold text-white">
+              {" "}
+              CLEANING SERVICE
+            </h3>
             <h2 className=" mt-8 pl-2 md:pl-0 text-5xl leading-tight text-white capitalize font-bold">
               Do you want a personal cleaning service?
             </h2>
@@ -91,7 +94,7 @@ const Home = () => {
         </div>
       </Slider>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

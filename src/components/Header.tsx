@@ -1,6 +1,6 @@
 "use client";
 // import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdClose, MdMenu, MdOutlineCleaningServices } from "react-icons/md";
 import { Link } from "react-scroll";
 export const navData = [
@@ -53,20 +53,32 @@ const Header = () => {
     }
   };
 
-  window.addEventListener("scroll", scrolly);
-
+  useEffect(() => {
+    window.addEventListener("scroll", scrolly);
+    return () => {
+      window.addEventListener("scroll", scrolly);
+    };
+  }, []);
   return (
     <header
       className={
         scrollColor
           ? `  bg-blue-900   duration-500 py-6 flex shadow-md  shadow-blue-700   items-center justify-between px-4  md:px-40 `
           : `  py-6 flex  duration-500 relative   items-center justify-between px-4  md:px-40`
-          
       }
     >
       <div>
         <h1 className=" cursor-pointer font-bold flex items-center text-3xl text-yellow-400">
-          BenabCleaning <MdOutlineCleaningServices />
+          <Link
+            to="/"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className=" flex items-center"
+          >
+            BenabCleaning <MdOutlineCleaningServices />
+          </Link>
         </h1>
       </div>
       <div>
@@ -84,7 +96,12 @@ const Header = () => {
                   key={navItems.id}
                   className="flex"
                 >
-                  <li onClick={()=> setShowMenu(false)} className=" text-2xl cursor-pointer ">{navItems.title}</li>
+                  <li
+                    onClick={() => setShowMenu(false)}
+                    className=" text-2xl cursor-pointer "
+                  >
+                    {navItems.title}
+                  </li>
                 </Link>
               ))}
             </ul>
@@ -105,23 +122,19 @@ const Header = () => {
                 <li className=" text-lg cursor-pointer ">{navItems.title}</li>
               </Link>
             ))}
-             
-          
           </ul>
         )}
-         {
-                showMenu? ( <MdClose
-                  onClick={() => setShowMenu(false)}
-                  className="md:hidden    text-4xl"
-                />):(
-                  <MdMenu
-                  onClick={() => setShowMenu(true)}
-                 
-                  className="md:hidden  text-4xl"
-                />
-                )
-               
-              }
+        {showMenu ? (
+          <MdClose
+            onClick={() => setShowMenu(false)}
+            className="md:hidden    text-4xl"
+          />
+        ) : (
+          <MdMenu
+            onClick={() => setShowMenu(true)}
+            className="md:hidden  text-4xl"
+          />
+        )}
       </div>
     </header>
   );

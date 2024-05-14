@@ -64,6 +64,7 @@ const Pricing = () => {
       <div className=" w-full md:px-0   md:w-full   flex flex-col md:flex-row items-center gap-7 mt-16">
         {priceData.map((priceInfo) => (
           <div
+          key={priceInfo.title}
             className={`${
               priceInfo.featured
                 ? `rounded-md relative overflow-hidden   shadow-xl duration-200 w-[95%] mx-auto  md:w-[800px] py-12 border-gray-100 border-[1px] flex flex-col gap-7  items-center  `
@@ -80,7 +81,7 @@ const Pricing = () => {
             </p>
             <ul className=" flex flex-col gap-4 ">
               {priceInfo.services.map((serve) => (
-                <li className=" text-gray-400 font-lg">{serve}</li>
+                <li key={serve} className=" text-gray-400 font-lg">{serve}</li>
               ))}
             </ul>
             {
