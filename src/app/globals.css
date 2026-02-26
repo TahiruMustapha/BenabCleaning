@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .active{
-    @apply   text-yellow-300 font-semibold
+    @apply text-[#FFAA00] font-semibold
 }

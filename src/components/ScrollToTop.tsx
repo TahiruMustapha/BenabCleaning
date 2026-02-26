@@ -26,10 +26,10 @@ const ScrollToTop = () => {
     });
   },[]);
   return (
-    <div className=" w-14 h-14 z-50 hidden teext-3xl fixed top-[85vh] right-3 bg-blue-900 text-gray-200  hover:text-white rounded-full border-[1px] border-yellow-400 shadow-cardShadwo scrollBt hover:border-yellow-400 duration-300">
+    <div className=" w-14 h-14 z-50 hidden teext-3xl fixed top-[85vh] right-3 bg-blue-900 text-gray-200  hover:text-white rounded-full border-[1px] border-[#FFAA00] shadow-cardShadwo scrollBt hover:border-yellow-400 duration-300">
       <button className=" w-full h-full flex items-center justify-center relative -rotate-90">
         {" "}
-        <TbChevronRight className=" text-xl" />{" "}
+        <TbChevronRight className=" text-xl text-[#FFAA00]" />
       </button>
     </div>
   );
