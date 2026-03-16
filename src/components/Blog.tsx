@@ -54,7 +54,14 @@ const Blog = () => {
       <div className=" h-full  flex  px-2 py-2 flex-col md:flex-row gap-6  mt-20 w-full md:w-[85%] mx-auto ">
         {blogData.map((blogItem) => (
           <div key={blogItem.userName} className=" w-full md:w-[600px]  bg-blue-50 pb-6 ">
-            <img src={blogItem.img} alt="img"   className=" w-full object-cover" />
+            <div className="relative w-full h-64">
+              <Image 
+                src={blogItem.img} 
+                alt={blogItem.how} 
+                fill 
+                className="object-cover" 
+              />
+            </div>
           <div className=" mt-6 px-6">
               <div className=" flex items-center gap-4">
                 <p className=" text-blue-800 bg-yellow-300 px-1 py-2 rounded-md">{blogItem.cleaningType}</p>
