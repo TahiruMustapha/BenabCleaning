@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import Slider from "react-slick";
@@ -43,7 +44,13 @@ const Gallery = () => {
   return (
     <div id="gallery" className=" bg-blue-50 mt-28 pb-32">
       <div className=" flex flex-col  max-w-[480px] mx-auto  mt-5 items-center justify-between">
-        <img src="/service.png" alt="img" className=" mt-10 mb-10" />
+        <Image 
+          src="/service.png" 
+          alt="Service" 
+          width={60} 
+          height={60} 
+          className=" mt-10 mb-10" 
+        />
         <h3 className=" text-blue-600 font-light tracking-wider">GALLERY</h3>
         <div>
           <h4 className="text-blue-600 leading-[1.5]  tracking-wide text-center font-normal text-3xl capitalize mt-10">
@@ -53,8 +60,13 @@ const Gallery = () => {
       </div>
       <div className="  mt-24 max-w-[78%]  pb-10   mx-auto  ">
         <Slider {...settings}>
-            <div className={ `relative overflow-x-hidden mx-1 max-w-[510px]   group`}>
-                <img src="/gallery1.jpg" alt="image" className="max-w-[562px]  object-cover" />
+            <div className={ `relative overflow-x-hidden mx-1 max-w-[510px] h-[350px] group`}>
+                <Image 
+                  src="/gallery1.jpg" 
+                  alt="Monthly Cleaning Service" 
+                  fill 
+                  className="object-cover" 
+                />
                <div className=" w-[100%]  absolute top-0 hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  h-full   ">
                 <div className="w-full h-full hidden group-hover:inline-flex    gap-5 flex-col items-center justify-center       ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center  bg-yellow-400 shadow-md"><FaSearch/> </p> 
@@ -64,8 +76,13 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group ">
-            <img src="/gallery2.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px] h-[350px] group ">
+            <Image 
+              src="/gallery2.jpg" 
+              alt="Monthly Cleaning Service" 
+              fill 
+              className="object-cover" 
+            />
             <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 
@@ -75,8 +92,13 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group  ">
-            <img src="/gallery3.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px] h-[350px] group  ">
+            <Image 
+              src="/gallery3.jpg" 
+              alt="Monthly Cleaning Service" 
+              fill 
+              className="object-cover" 
+            />
             <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 
@@ -86,8 +108,13 @@ const Gallery = () => {
                
                </div>
             </div>
-            <div className="relative overflow-x-hidden mx-1 max-w-[510px]  group  ">
-            <img src="/about33.jpg" alt="image"  className=" max-w-[562px] object-cover"/>
+            <div className="relative overflow-x-hidden mx-1 max-w-[510px] h-[350px] group  ">
+            <Image 
+              src="/about33.jpg" 
+              alt="Monthly Cleaning Service" 
+              fill 
+              className="object-cover" 
+            />
             <div className=" w-[100%]  absolute   hover:bg-blue-900 hover:bg-opacity-90 transition ease-in duration-500  top-0 h-full   ">
                 <div className="w-full h-full  gap-5 hidden group-hover:inline-flex  flex-col items-center justify-center  ">
                 <p className=" w-12 h-12 text-gray-500 rounded-full cursor-pointer flex items-center justify-center bg-yellow-400 shadow-md"><FaSearch/> </p> 

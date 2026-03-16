@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { navData } from "./Header";
 import { MdArrowRightAlt } from "react-icons/md";
@@ -36,7 +37,13 @@ const AboutInfo = () => {
   return (
     <div id={"/about"} className=" w-full mt-20 ">
       <div className=" flex flex-col  max-w-[480px] mx-auto  mt-5 items-center justify-between">
-        <img src="/service.png" alt="img" className=" mt-10 mb-10" />
+        <Image 
+          src="/service.png" 
+          alt="Cleaning Service" 
+          width={60} 
+          height={60} 
+          className=" mt-10 mb-10" 
+        />
         <h3 className=" text-blue-600 font-light tracking-wider">WHAT WE DO</h3>
         <div>
           <h4 className="text-blue-600 leading-[1.5] tracking-wide text-center font-medium text-3xl capitalize mt-10">
@@ -50,7 +57,14 @@ const AboutInfo = () => {
             key={servBox.title}
             className={`w-full border-[0.5px] border-gray-50   text-center shadow-lg duration-200   rounded-md `}
           >
-            <img src={servBox.img} alt="img" className=" w-full" />
+            <div className="relative w-full h-64">
+              <Image 
+                src={servBox.img} 
+                alt={servBox.title} 
+                fill 
+                className="object-cover rounded-t-md" 
+              />
+            </div>
 
             <h3 className=" text-blue-800 pt-6 font-medium text-lg mb-6">
               {servBox.title}

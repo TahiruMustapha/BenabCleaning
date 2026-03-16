@@ -47,6 +47,7 @@ const Home = () => {
           muted
           loop
           playsInline
+          poster="/cln4.jpg"
           className="w-full h-full object-cover opacity-60"
         >
           <source src="/manCleaning.mp4" type="video/mp4" />

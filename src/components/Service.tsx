@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { MdArrowRightAlt, MdOutlineCleaningServices } from "react-icons/md";
 import { motion, Variants } from "motion/react";
@@ -73,19 +74,20 @@ const Service = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="relative overflow-hidden rounded-[1rem] mb-20 max-w-5xl mx-auto group shadow-2xl shadow-blue-900/5">
+        <div className="relative overflow-hidden rounded-[1rem] mb-20 max-w-5xl mx-auto group shadow-2xl shadow-blue-900/5 h-[300px]">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0">
-            <motion.div 
-              initial={{ scale: 1.1 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1.5 }}
-              className="absolute inset-0 bg-[url('/cln4.jpg')] bg-cover bg-center bg-no-repeat opacity-40" 
+            <Image 
+              src="/cln4.jpg" 
+              alt="Background Cleaning" 
+              fill 
+              className="object-cover object-center opacity-40 transition-transform duration-700 group-hover:scale-110"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-transparent" />
           </div>
 
-          <div className="relative z-10 py-20 px-8 flex flex-col items-center text-center">
+          <div className="relative z-10 py-20 px-8 flex flex-col items-center text-center justify-center h-full">
            
             
             <motion.span
@@ -123,7 +125,13 @@ const Service = () => {
               
               <div className="relative z-10">
                 <div className="mb-10 w-16 h-16 flex items-center justify-center bg-blue-50 rounded-2xl group-hover:bg-[#FFAA00] transition-colors duration-300">
-                  <img src={service.img} alt={service.title} className="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300" />
+                  <Image 
+                    src={service.img} 
+                    alt={service.title} 
+                    width={40} 
+                    height={40} 
+                    className="object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300" 
+                  />
                 </div>
 
                 <h3 className="text-xl font-bold text-blue-950 mb-4 group-hover:text-blue-600 transition-colors">

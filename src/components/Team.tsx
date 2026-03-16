@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaFacebookF, FaGoogle, FaGooglePlusG } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
@@ -27,7 +28,13 @@ const Team = () => {
   return (
     <div id="team" className=" w-full">
       <div className=" flex flex-col  max-w-[480px] mx-auto  mt-5 items-center justify-between">
-        <img src="/service.png" alt="img" className=" mt-10 mb-10" />
+        <Image 
+          src="/service.png" 
+          alt="Service" 
+          width={60} 
+          height={60} 
+          className=" mt-10 mb-10" 
+        />
         <h3 className=" text-blue-600 font-light tracking-wider">
           OUR MEMBERS
         </h3>
@@ -39,12 +46,13 @@ const Team = () => {
       </div>
       <div className=" w-full  md:w-[80%] mx-auto md:mt-20 mt-10 gap-6 h-full md:h-[70vh] flex justify-center flex-col md:flex-row  items-center">
         {teamData.map((team) => (
-          <div key={team.name} className=" relative group w-full h-full p-2 md:p-0">
-            <div  className="">
-              <img
+          <div key={team.name} className=" relative group w-full h-[400px] p-2 md:p-0">
+            <div  className="relative w-full h-full">
+              <Image
                 src={team.img}
-                alt="img"
-                className=" rounded-md object-cover w-full  "
+                alt={team.name}
+                fill
+                className=" rounded-md object-cover"
               />
             </div>
             <div className=" hidden  group-hover:inline-flex flex-col px-3 py-4 items-center justify-center gap-5 absolute text-white  w-[70%] mx-auto top-[66%] z-50 left-[15%] right-[25%] md:top-[52%] md:left-[15%] md:right-[20%] bg-blue-900 ">
