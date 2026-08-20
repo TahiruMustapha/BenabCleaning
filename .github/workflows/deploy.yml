@@ -39,10 +39,15 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # Deploy using AWS CLI directly (uses the authenticated OIDC session)
+      # Deploy using AWS CLI directly
       - name: Deploy to Elastic Beanstalk
         run: |
-          S3_BUCKET=$(aws elasticbeanstalk describe-application-versions --application-name benabcleaning --query "ApplicationVersions[0].SourceBundle.S3Bucket" --output text)
+          # Dynamically fetch AWS Account ID and Region
+          AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
+          AWS_REGION=${{ secrets.AWS_REGION }}
+
+          # Construct default Elastic Beanstalk S3 bucket name
+          S3_BUCKET="elasticbeanstalk-${AWS_REGION}-${AWS_ACCOUNT_ID}"
           VERSION_LABEL="deploy-${{ github.sha }}"
 
           # Upload zip to Elastic Beanstalk S3 bucket
