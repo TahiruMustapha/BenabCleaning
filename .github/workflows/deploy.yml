@@ -48,7 +48,9 @@ jobs:
 
           # Construct default Elastic Beanstalk S3 bucket name
           S3_BUCKET="elasticbeanstalk-${AWS_REGION}-${AWS_ACCOUNT_ID}"
-          VERSION_LABEL="deploy-${{ github.sha }}"
+
+          # Add unique run attempt/timestamp to allow re-running jobs on the same commit
+          VERSION_LABEL="deploy-${{ github.sha }}-${{ github.run_attempt }}"
 
           # Upload zip to Elastic Beanstalk S3 bucket
           aws s3 cp deploy.zip s3://$S3_BUCKET/$VERSION_LABEL.zip
