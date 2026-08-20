@@ -1,0 +1,60 @@
+name: Deploy Next.js to Elastic Beanstalk (OIDC)
+
+on:
+  push:
+    branches:
+      - main
+
+# REQUIRED for OIDC authentication
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Generate Deployment Zip
+        run: |
+          zip -r deploy.zip . -x "node_modules/*" ".git/*"
+
+      # OIDC Authentication with AWS
+      - name: Configure AWS Credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      # Deploy using AWS CLI directly (uses the authenticated OIDC session)
+      - name: Deploy to Elastic Beanstalk
+        run: |
+          S3_BUCKET=$(aws elasticbeanstalk describe-application-versions --application-name benabcleaning --query "ApplicationVersions[0].SourceBundle.S3Bucket" --output text)
+          VERSION_LABEL="deploy-${{ github.sha }}"
+
+          # Upload zip to Elastic Beanstalk S3 bucket
+          aws s3 cp deploy.zip s3://$S3_BUCKET/$VERSION_LABEL.zip
+
+          # Create application version
+          aws elasticbeanstalk create-application-version \
+            --application-name benabcleaning \
+            --version-label $VERSION_LABEL \
+            --source-bundle S3Bucket="$S3_BUCKET",S3Key="$VERSION_LABEL.zip"
+
+          # Update environment
+          aws elasticbeanstalk update-environment \
+            --environment-name "Benabcleaning-prod" \
+            --version-label $VERSION_LABEL
