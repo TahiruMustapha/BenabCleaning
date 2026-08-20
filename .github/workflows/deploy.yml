@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate Deployment Zip
         run: |
-          zip -r deploy.zip . -x "node_modules/*" ".git/*"
+          zip -r deploy.zip . -x "node_modules/*" ".git/*" ".github/*" "deploy.zip"
 
       # OIDC Authentication with AWS
       - name: Configure AWS Credentials via OIDC
