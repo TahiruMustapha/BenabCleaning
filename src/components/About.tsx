@@ -155,7 +155,7 @@ const About = () => {
       </section>
 
       {/* Animated Metrics Layer */}
-      <section className="bg-slate-900  py-32 relative overflow-hidden">
+      <section className="bg-blue-950/90  py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:40px_40px]" />
         </div>
